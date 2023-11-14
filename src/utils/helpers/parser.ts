@@ -237,3 +237,334 @@ export const parseStringObjectToEpeverObject = (obj: any): any => {
 
   return newObj;
 };
+
+export const parseStringObjectToGoodweObject = (obj: any): any => {
+  const newObj = {
+    
+  id: obj.id,
+
+  
+  deviceId: obj.deviceId,
+
+  
+  lowestFeedingVoltageOfPV: Number(obj.lowestFeedingVoltageOfPV),
+
+  
+  reconnectTime: Number(obj.reconnectTime),
+
+  
+  highLimitOfGridVoltage: Number(obj.highLimitOfGridVoltage),
+
+  
+  lowLimitOfGridVoltage: Number(obj.lowLimitOfGridVoltage),
+
+  
+  highLimitOfGridFrequency: Number(obj.highLimitOfGridFrequency),
+
+  
+  lowLimitOfGridFreqency: Number(obj.lowLimitOfGridFreqency),
+
+  
+  rtcDateTimeYearMonth: obj.rtcDateTimeYearMonth,
+
+  
+  rtcDateTimeDateHour: obj.rtcDateTimeDateHour,
+
+  
+  rtcDateTimeMinuteSecond: obj.rtcDateTimeMinuteSecond,
+
+  
+  rangeOfRealPowerAdjust: Number(obj.rangeOfRealPowerAdjust),
+
+  
+  rangeOfReactivePowerAdjust: obj.rangeOfReactivePowerAdjust,
+
+  
+  serialNumberOfInverter: obj.serialNumberOfInverter,
+
+  
+  modelNameOfInverter: obj.modelNameOfInverter,
+
+  
+  errorCode: obj.errorCode,
+
+  
+  eTotal: Number(obj.eTotal),
+
+  
+  hTotal: Number(obj.hTotal),
+
+  
+  pvVoltageOfFirstTracker: Number(obj.pvVoltageOfFirstTracker),
+
+  
+  pvVoltageOfSecondTracker: Number(obj.pvVoltageOfSecondTracker),
+
+  
+  pvCurrentOfFirstTracker: Number(obj.pvCurrentOfFirstTracker),
+
+  
+  pvCurrentOfSecondTracker: Number(obj.pvCurrentOfSecondTracker),
+
+  
+  gridVoltageOfPhase1: Number(obj.gridVoltageOfPhase1),
+
+  
+  gridVoltageOfPhase2: Number(obj.gridVoltageOfPhase2),
+
+  
+  gridVoltageOfPhase3: Number(obj.gridVoltageOfPhase3),
+
+  
+  gridCurrentOfPhase1: Number(obj.gridCurrentOfPhase1),
+
+  
+  gridCurrentOfPhase2: Number(obj.gridCurrentOfPhase2),
+
+  
+  gridCurrentOfPhase3: Number(obj.gridCurrentOfPhase3),
+
+  
+  gridFrequencyOfPhase1: Number(obj.gridFrequencyOfPhase1),
+
+  
+  gridFrequencyOfPhase2: Number(obj.gridFrequencyOfPhase2),
+
+  
+  gridFrequencyOfPhase3: Number(obj.gridFrequencyOfPhase3),
+
+  
+  feedingPowerToGrid: Number(obj.feedingPowerToGrid),
+
+  
+  runningStatus: obj.runningStatus,
+
+  
+  temperatureOfHeatsink: Number(obj.temperatureOfHeatsink),
+
+  
+  eYieldDay: Number(obj.eYieldDay),
+
+  
+  vpv1: Number(obj.vpv1),
+
+  
+  vpv2: Number(obj.vpv2),
+
+  
+  ipv1: Number(obj.ipv1),
+
+  
+  ipv2: Number(obj.ipv2),
+
+  
+  vac1: Number(obj.vac1),
+
+  
+  vac2: Number(obj.vac2),
+
+  
+  vac3: Number(obj.vac3),
+
+  
+  iac1: Number(obj.iac1),
+
+  
+  iac2: Number(obj.iac2),
+
+  
+  iac3: Number(obj.iac3),
+
+  
+  fac1: Number(obj.fac1),
+
+  
+  fac2: Number(obj.fac2),
+
+  
+  fac3: Number(obj.fac3),
+
+  
+  pacL: Number(obj.pacL),
+
+  
+  workMode: obj.workMode,
+
+  
+  temperature: Number(obj.temperature),
+
+  
+  errorMessageH: obj.errorMessageH,
+
+  
+  errorMessageL: obj.errorMessageL,
+
+  
+  eTotalH: Number(obj.eTotalH),
+
+  
+  eTotalL: Number(obj.eTotalL),
+
+  
+  hTotalH: Number(obj.hTotalH),
+
+  
+  hTotalL: Number(obj.hTotalL),
+
+  
+  firmwareVersion: obj.firmwareVersion,
+
+  
+  warningCode: obj.warningCode,
+
+  
+  pv2FaultValue: Number(obj.pv2FaultValue),
+
+  
+  functionsValue: obj.functionsValue,
+
+  
+  line2VfaultValue: Number(obj.line2VfaultValue),
+
+  
+  line3VfaultValue: Number(obj.line3VfaultValue),
+
+  
+  busVoltage: Number(obj.busVoltage),
+
+  
+  nbusVoltage: Number(obj.nbusVoltage),
+
+  
+  line3FfaultValue: Number(obj.line3FfaultValue),
+
+  
+  safetyCountry: Number(obj.safetyCountry),
+
+  
+  eFeedDay: Number(obj.eFeedDay),
+
+  
+  yearMonth: obj.yearMonth,
+
+  
+  dateHour: obj.dateHour,
+
+  
+  minuteSecond: obj.minuteSecond,
+
+  
+  manufactureID: obj.manufactureID,
+
+  
+  rssi: Number(obj.rssi),
+
+  
+  pvMode: obj.pvMode,
+
+  
+  fmVersionOfARM: obj.fmVersionOfARM,
+
+  
+  gprsBurnInMode: obj.gprsBurnInMode,
+
+  
+  pacH: Number(obj.pacH),
+
+  
+  vpv3: Number(obj.vpv3),
+
+  
+  vpv4: Number(obj.vpv4),
+
+  
+  ipv3: Number(obj.ipv3),
+
+  
+  ipv4: Number(obj.ipv4),
+
+  
+  istr1: Number(obj.istr1),
+
+  
+  istr2: Number(obj.istr2),
+
+  
+  istr3: Number(obj.istr3),
+
+  
+  istr4: Number(obj.istr4),
+
+  
+  istr5: Number(obj.istr5),
+
+  
+  istr6: Number(obj.istr6),
+
+  
+  istr7: Number(obj.istr7),
+
+  
+  istr8: Number(obj.istr8),
+
+  
+  istr9: Number(obj.istr9),
+
+  
+  istr10: Number(obj.istr10),
+
+  
+  istr11: Number(obj.istr11),
+
+  
+  istr12: Number(obj.istr12),
+
+  
+  istr13: Number(obj.istr13),
+
+  
+  istr14: Number(obj.istr14),
+
+  
+  istr15: Number(obj.istr15),
+
+  
+  istr16: Number(obj.istr16),
+
+  
+  iStringStatus: obj.iStringStatus,
+
+  
+  istr18: Number(obj.istr18),
+
+  
+  istr19: Number(obj.istr19),
+
+  
+  istr20: Number(obj.istr20),
+
+  
+  pidWietapStatus: obj.pidWietapStatus,
+
+  
+  timestamp: Number(obj.timestamp),
+
+  
+  timestamp_minute: Number(obj.timestamp_minute),
+
+  
+  timestamp_hour: Number(obj.timestamp_hour),
+
+  
+  timestamp_date: Number(obj.timestamp_date),
+
+  
+  timestamp_month: Number(obj.timestamp_month),
+
+  
+  timestamp_year: Number(obj.timestamp_year),
+  };
+
+  return newObj;
+};
+

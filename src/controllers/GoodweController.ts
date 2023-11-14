@@ -1,7 +1,7 @@
 import { FindManyOptions } from 'typeorm';
 import { MainDataSource } from '../database/datasources';
 import { Goodwe } from '../models';
-import { FirestoreService } from '../services';
+import { FileSystemService, FirestoreService } from '../services';
 import { getDiffNewDataArray } from '../utils';
 
 class GoodweController {
@@ -35,21 +35,18 @@ class GoodweController {
     return data;
   }
 
-  /**
-   * Should be implemented first...
-   * @deprecated
-   * @returns
-   */
   async fetchCSVData() {
-    // const fsService = new FileSystemService();
-    // const data = await fsService.fetchEpeverDataFromCSV('test.csv');
-    // return data;
+    const fsService = new FileSystemService();
+
+    const data = await fsService.fetchGoodweDataFromCSV('test.csv');
+    
+    return data;
   }
 
   async syncData() {
     try {
       const oldData = await this.getLocalData();
-      const newData = await this.fetchFirestoreData();
+      const newData = await this.fetchCSVData();
 
       const dataToUpdate = getDiffNewDataArray(oldData, newData);
 
@@ -59,7 +56,7 @@ class GoodweController {
         await MainDataSource.manager.save(Goodwe, element);
       }
 
-      await this.clearFirestoreData();
+      // await this.clearFirestoreData();
 
       console.log(`\n=================================`);
       console.log(`\nSynced Finished`);
