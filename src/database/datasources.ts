@@ -24,7 +24,7 @@ export const MainDataSource = new DataSource({
   username: 'solar_sync',
   password: '902nfui3h1087hwuyg19736gr197236gr9761r',
   database: 'solar',
-  logging: true,
+  logging: false,
   entities: entitiesPath,
 });
 
