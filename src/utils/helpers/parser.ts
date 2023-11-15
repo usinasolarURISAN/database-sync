@@ -568,11 +568,11 @@ export const parseStringObjectToGoodweObject = (obj: any): any => {
   return newObj;
 };
 
-export const parseStringObjectToWeatherObject = (obj: any): any => {
+export const parseStringObjectToEpeverObject = (obj: any): any => {
   const newObj = {
     id: obj.id,
   
-    weather_id: obj.weather_id,
+    weather_id: Number(obj.weather_id),
   
     weather_main: obj.weather_main,
   
@@ -580,39 +580,39 @@ export const parseStringObjectToWeatherObject = (obj: any): any => {
   
     weather_icon: obj.weather_icon,
   
-    main_temp: obj.main_temp,
+    main_temp: Number(obj.main_temp),
   
-    main_tempMin: obj.main_tempMin,
+    main_tempMin: Number(obj.main_tempMin),
   
-    main_tempMax: obj.main_tempMax,
+    main_tempMax: Number(obj.main_tempMax),
   
-    main_pressure: obj.main_pressure,
+    main_pressure: Number(obj.main_pressure),
   
-    main_humidity: obj.main_humidity,
+    main_humidity: Number(obj.main_humidity),
   
-    visibility: obj.visibility,
+    visibility: Number(obj.visibility),
   
-    wind_speed: obj.wind_speed,
+    wind_speed: Number(obj.wind_speed),
   
-    wind_deg: obj.wind_deg,
+    wind_deg: Number(obj.wind_deg),
   
-    clouds_all: obj.clouds_all,
+    clouds_all: Number(obj.clouds_all),
   
-    api_code: obj.api_code,
+    api_code: Number(obj.api_code),
   
     api_message: obj.api_message,
   
-    timestamp: obj.timestamp,
+    timestamp: Number(obj.timestamp),
   
-    timestamp_minute: obj.timestamp_minute,
+    timestamp_minute: Number(obj.timestamp_minute),
   
-    timestamp_hour: obj.timestamp_hour,
+    timestamp_hour: Number(obj.timestamp_hour),
   
-    timestamp_date: obj.timestamp_date,
+    timestamp_date: Number(obj.timestamp_date),
   
-    timestamp_month: obj.timestamp_month,
+    timestamp_month: Number(obj.timestamp_month),
   
-    timestamp_year: obj.timestamp_year,
+    timestamp_year: Number(obj.timestamp_year),
   };
 
   return newObj;
