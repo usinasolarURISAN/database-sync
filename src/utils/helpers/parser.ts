@@ -568,7 +568,7 @@ export const parseStringObjectToGoodweObject = (obj: any): any => {
   return newObj;
 };
 
-export const parseStringObjectToEpeverObject = (obj: any): any => {
+export const parseStringObjectToWeatherObject = (obj: any): any => {
   const newObj = {
     id: obj.id,
   
