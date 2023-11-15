@@ -1,7 +1,7 @@
 import * as csv from 'fast-csv';
 import * as fileSystem from 'fs';
 import * as path from 'path';
-import { parseStringObjectToEpeverObject, parseStringObjectToGoodweObject } from '../utils';
+import { parseStringObjectToEpeverObject, parseStringObjectToGoodweObject, parseStringObjectToWeatherObject } from '../utils';
 
 class FileSystemService {
   /**
@@ -45,6 +45,25 @@ class FileSystemService {
         .on('error', (error) => reject(error))
         .on('data', (row) => {
           data.push(parseStringObjectToGoodweObject(row));
+        })
+        .on('end', () => resolve(data));
+    });
+  }
+
+  async fetchWeatherDataFromCSV<T = unknown>(fileName: string): Promise<T[]> {
+    const data = [];
+
+    const filePath = path.resolve(__dirname, '..', '..', 'csv', fileName);
+
+    console.log(`\n[FileSystemService] - Reading CSV from ${filePath}\n`);
+
+    return new Promise((resolve, reject) => {
+      fileSystem
+        .createReadStream(filePath)
+        .pipe(csv.parse({ headers: true, delimiter: ';' }))
+        .on('error', (error) => reject(error))
+        .on('data', (row) => {
+          data.push(parseStringObjectToWeatherObject(row));
         })
         .on('end', () => resolve(data));
     });

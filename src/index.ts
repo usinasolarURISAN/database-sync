@@ -1,4 +1,4 @@
-import { GoodweController } from './controllers';
+import { WeatherController } from './controllers/WeatherController';
 import bootstrap from './utils/config/bootstrap';
 
 // bootstrap();
@@ -7,10 +7,12 @@ const syncThings = async () => {
   await bootstrap();
 
   // const epeverController = new EpeverController();
-  const goodweController = new GoodweController();
+  // const goodweController = new GoodweController();
+  const weatherController = new WeatherController();
 
   // await epeverController.syncData();
-  await goodweController.syncData();
+  // await goodweController.syncData();
+  await weatherController.syncData();
 };
 
 syncThings()

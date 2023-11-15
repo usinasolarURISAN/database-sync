@@ -568,3 +568,52 @@ export const parseStringObjectToGoodweObject = (obj: any): any => {
   return newObj;
 };
 
+export const parseStringObjectToWeatherObject = (obj: any): any => {
+  const newObj = {
+    id: obj.id,
+  
+    weather_id: obj.weather_id,
+  
+    weather_main: obj.weather_main,
+  
+    weather_description: obj.weather_description,
+  
+    weather_icon: obj.weather_icon,
+  
+    main_temp: obj.main_temp,
+  
+    main_tempMin: obj.main_tempMin,
+  
+    main_tempMax: obj.main_tempMax,
+  
+    main_pressure: obj.main_pressure,
+  
+    main_humidity: obj.main_humidity,
+  
+    visibility: obj.visibility,
+  
+    wind_speed: obj.wind_speed,
+  
+    wind_deg: obj.wind_deg,
+  
+    clouds_all: obj.clouds_all,
+  
+    api_code: obj.api_code,
+  
+    api_message: obj.api_message,
+  
+    timestamp: obj.timestamp,
+  
+    timestamp_minute: obj.timestamp_minute,
+  
+    timestamp_hour: obj.timestamp_hour,
+  
+    timestamp_date: obj.timestamp_date,
+  
+    timestamp_month: obj.timestamp_month,
+  
+    timestamp_year: obj.timestamp_year,
+  };
+
+  return newObj;
+};
